@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@+id/drag_view"
+            app:touchAnchorSide="top" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/drag_view"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Constraint
+            android:id="@+id/cover_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/drag_view"
+            app:layout_constraintEnd_toStartOf="@id/title_tv"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/drag_view"
+            app:srcCompat="@drawable/cover" />
+
+        <Constraint
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="Маленький человек"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/author_tv"
+            app:layout_constraintEnd_toStartOf="@id/prev_ib"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/cover_iv"
+            app:layout_constraintTop_toTopOf="@id/drag_view"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Constraint
+            android:id="@+id/author_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="Zемфира"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/drag_view"
+            app:layout_constraintEnd_toEndOf="@id/title_tv"
+            app:layout_constraintStart_toStartOf="@id/title_tv"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+        <Constraint
+            android:id="@+id/prev_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@drawable/ic_previous"
+            app:layout_constraintBottom_toBottomOf="@id/drag_view"
+            app:layout_constraintEnd_toStartOf="@id/play_ib"
+            app:layout_constraintStart_toEndOf="@id/title_tv"
+            app:layout_constraintTop_toTopOf="@id/drag_view" />
+
+        <Constraint
+            android:id="@+id/play_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@drawable/ic_play_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/drag_view"
+            app:layout_constraintEnd_toStartOf="@id/next_ib"
+            app:layout_constraintStart_toEndOf="@id/prev_ib"
+            app:layout_constraintTop_toTopOf="@id/drag_view" />
+
+        <Constraint
+            android:id="@+id/next_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@drawable/ic_next"
+            app:layout_constraintBottom_toBottomOf="@id/drag_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/play_ib"
+            app:layout_constraintTop_toTopOf="@id/drag_view" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/drag_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Constraint
+            android:id="@+id/cover_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toTopOf="@id/title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/drag_view"
+            app:layout_constraintVertical_bias="0.35"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/cover" />
+
+        <Constraint
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Маленький человек"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@id/author_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cover_iv"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Constraint
+            android:id="@+id/author_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Zемфира"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/drag_view"
+            app:layout_constraintEnd_toEndOf="@id/title_tv"
+            app:layout_constraintStart_toStartOf="@id/title_tv"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+        <Constraint
+            android:id="@+id/prev_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@drawable/ic_previous"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/play_ib"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/author_tv" />
+
+        <Constraint
+            android:id="@+id/play_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@drawable/ic_play_arrow"
+            app:layout_constraintEnd_toStartOf="@id/next_ib"
+            app:layout_constraintStart_toEndOf="@id/prev_ib"
+            app:layout_constraintTop_toBottomOf="@id/author_tv" />
+
+        <Constraint
+            android:id="@+id/next_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@drawable/ic_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/play_ib"
+            app:layout_constraintTop_toBottomOf="@id/author_tv" />
+    </ConstraintSet>
+
+</appScene>
