@@ -28,7 +28,7 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
-        android:id="@+id/cover_iv"
+        android:id="@+id/more_ib"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -54,7 +54,7 @@
         app:layout_constraintBottom_toTopOf="@id/author_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cover_iv"
+        app:layout_constraintTop_toBottomOf="@id/more_ib"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
