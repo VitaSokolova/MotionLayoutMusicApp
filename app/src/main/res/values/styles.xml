@@ -1,11 +1,96 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/textControlPrimary</item>
+        <item name="android:textColorSecondary">@color/textControlSecondary</item>
+    </style>
+
+    <!-- ТЕМЫ НАДПИСЕЙ -->
+    <style name="RobotoRegular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="RobotoRegular.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="RobotoRegular.12.Primary">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="RobotoRegular.12.Secondary">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="RobotoRegular.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RobotoRegular.14.Primary">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="RobotoRegular.14.Secondary">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="RobotoRegular.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="RobotoRegular.16.Secondary">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="RobotoMedium" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="RobotoMedium.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="RobotoMedium.12.Primary">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="RobotoMedium.12.Secondary">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="RobotoMedium.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RobotoMedium.14.Primary">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="RobotoMedium.14.Secondary">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="RobotoMedium.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="RobotoMedium.20.Primary">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="RobotoBold" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="RobotoBold.10">
+        <item name="android:textSize">10sp</item>
     </style>
 
 </resources>
+
