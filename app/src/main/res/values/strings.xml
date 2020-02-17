@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MotionMusicApp</string>
+    <string name="main_tab">Главная</string>
+    <string name="radio_tab">Радио</string>
+    <string name="music_tab">Моя музыка</string>
+    <string name="search_tab">Поиск</string>
 </resources>

@@ -9,6 +9,20 @@
 
         <item name="android:textColorPrimary">@color/textControlPrimary</item>
         <item name="android:textColorSecondary">@color/textControlSecondary</item>
+
+        <item name="android:colorControlNormal">@color/textControlSecondary</item>
+        <item name="android:colorControlActivated">@color/textControlPrimary</item>
+        <item name="android:colorControlHighlight">@color/textControlPrimary</item>
+    </style>
+
+    <style name="BottomBarStyle"  parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemIconTint">@drawable/bottom_bar_icon_selector</item>
+        <item name="itemTextColor">@drawable/bottom_bar_icon_selector</item>
+        <item name="itemTextAppearanceInactive">@style/RobotoRegular.12.Secondary</item>
+        <item name="itemTextAppearanceActive">@style/RobotoRegular.12.Primary</item>
     </style>
 
     <!-- ТЕМЫ НАДПИСЕЙ -->

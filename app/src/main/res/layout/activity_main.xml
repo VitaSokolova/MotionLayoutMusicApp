@@ -8,6 +8,16 @@
     tools:context=".MainActivity"
     tools:showPaths="true">
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/tab_bar"
+        style="@style/BottomBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation_menu" />
+
     <include layout="@layout/scene1" />
 
     <include layout="@layout/scene2" />

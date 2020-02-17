@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/main"
+        android:title="@string/main_tab"
+        android:icon="@drawable/ic_queue_music" />
+    <item android:id="@+id/radio"
+        android:title="@string/radio_tab"
+        android:icon="@drawable/ic_radio" />
+    <item android:id="@+id/music"
+        android:title="@string/music_tab"
+        android:icon="@drawable/ic_favorite" />
+    <item android:id="@+id/search"
+        android:title="@string/search_tab"
+        android:icon="@drawable/ic_search" />
+</menu>

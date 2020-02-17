@@ -56,7 +56,7 @@
             android:id="@+id/drag_view"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tab_bar"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
 
@@ -68,14 +68,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/drag_view" />
-
-        <Constraint
-            android:id="@+id/drag_view"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/music_bar_height"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
 
         <Constraint
             android:id="@+id/more_iv"
@@ -123,6 +115,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/title_tv"
             app:layout_constraintTop_toTopOf="@id/drag_view" />
+
+        <Constraint
+            android:id="@+id/tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:menu="@menu/navigation_menu" />
 
         <!--EndState-->
 
@@ -482,6 +483,14 @@
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toEndOf="@id/next_ib"
             app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
+
+        <Constraint
+            android:id="@+id/tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:menu="@menu/navigation_menu" />
+
 
     </ConstraintSet>
 
