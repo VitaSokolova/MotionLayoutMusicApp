@@ -6,13 +6,13 @@
         app:constraintSetEnd="@+id/end"
         app:constraintSetStart="@+id/start"
         app:duration="1500">
+
         <OnSwipe
             app:dragDirection="dragUp"
             app:touchAnchorId="@+id/drag_view"
             app:touchAnchorSide="top" />
 
         <KeyFrameSet>
-
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="30"
@@ -52,446 +52,177 @@
 
     <ConstraintSet android:id="@+id/start">
 
-        <Constraint
-            android:id="@+id/drag_view"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            app:layout_constraintBottom_toTopOf="@+id/tab_bar"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+        <Constraint android:id="@+id/drag_view">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                app:layout_constraintBottom_toTopOf="@+id/tab_bar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/guideline"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/music_bar_height"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
+        <Constraint android:id="@+id/guideline"/>
 
-        <Constraint
-            android:id="@+id/more_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toStartOf="@id/title_tv"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
+        <Constraint android:id="@+id/more_iv"/>
 
-        <Constraint
-            android:id="@+id/title_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Маленький человек"
-            app:layout_constraintBottom_toTopOf="@id/author_tv"
-            app:layout_constraintEnd_toStartOf="@id/play_ib"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@id/more_iv"
-            app:layout_constraintTop_toTopOf="@id/drag_view"
-            app:layout_constraintVertical_chainStyle="packed" />
+        <Constraint android:id="@+id/title_tv"/>
 
-        <Constraint
-            android:id="@+id/author_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="@id/title_tv"
-            app:layout_constraintStart_toStartOf="@id/title_tv"
-            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+        <Constraint android:id="@+id/author_tv"/>
 
+        <Constraint android:id="@+id/play_ib"/>
 
-        <Constraint
-            android:id="@+id/play_ib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/title_tv"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
-
-        <Constraint
-            android:id="@+id/tab_bar"
-            android:layout_width="match_parent"
-            android:layout_height="?android:attr/actionBarSize"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:menu="@menu/navigation_menu" />
+        <Constraint android:id="@+id/tab_bar">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:menu="@menu/navigation_menu" />
+        </Constraint>
 
         <!--EndState-->
 
-        <Constraint
-            android:id="@+id/collapse_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toStartOf="@id/now_playing_tv"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
+        <Constraint android:id="@+id/collapse_iv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/now_playing_tv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/playlist_tv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/playlist_ib">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/cover_iv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/extended_title_tv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/extended_author_tv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/progress_bar">
+            <PropertySet android:alpha="0" />
+        </Constraint>
 
         <Constraint
-            android:id="@+id/now_playing_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:alpha="0"
-            app:layout_constraintBottom_toTopOf="@id/playlist_tv"
-            app:layout_constraintEnd_toStartOf="@id/playlist_ib"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@id/collapse_iv"
-            app:layout_constraintTop_toTopOf="@id/drag_view"
-            app:layout_constraintVertical_chainStyle="packed" />
+            android:id="@+id/block_ib">
+            <PropertySet android:alpha="0" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/playlist_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="@id/now_playing_tv"
-            app:layout_constraintStart_toStartOf="@id/now_playing_tv"
-            app:layout_constraintTop_toBottomOf="@id/now_playing_tv" />
+        <Constraint android:id="@+id/prev_ib">
+            <PropertySet android:alpha="0" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/playlist_ib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/now_playing_tv"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
+        <Constraint android:id="@+id/extended_play_ib">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+        <Constraint android:id="@+id/next_ib">
+            <PropertySet android:alpha="0" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/cover_iv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toTopOf="@id/extended_title_tv"
-            app:layout_constraintDimensionRatio="H,1:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/guideline"
-            app:layout_constraintVertical_bias="0.1"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Constraint
-            android:id="@+id/extended_title_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toTopOf="@id/extended_author_tv"
-            app:layout_constraintEnd_toEndOf="@id/cover_iv"
-            app:layout_constraintStart_toStartOf="@id/cover_iv"
-            app:layout_constraintTop_toBottomOf="@id/cover_iv"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Constraint
-            android:id="@+id/extended_author_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toTopOf="@id/prev_ib"
-            app:layout_constraintEnd_toEndOf="@id/extended_title_tv"
-            app:layout_constraintStart_toStartOf="@id/extended_title_tv"
-            app:layout_constraintTop_toBottomOf="@id/extended_title_tv" />
-
-        <Constraint
-            android:id="@+id/progress_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toTopOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/extended_author_tv" />
-
-        <Constraint
-            android:id="@+id/block_ib"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="16dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toBottomOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toStartOf="@id/prev_ib"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
-
-        <Constraint
-            android:id="@+id/prev_ib"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:alpha="0"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toStartOf="@id/extended_play_ib"
-            app:layout_constraintStart_toEndOf="@id/block_ib"
-            app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
-
-        <Constraint
-            android:id="@+id/extended_play_ib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:alpha="0"
-            app:layout_constraintEnd_toStartOf="@id/next_ib"
-            app:layout_constraintStart_toEndOf="@id/prev_ib"
-            app:layout_constraintTop_toBottomOf="@id/progress_bar" />
-
-        <Constraint
-            android:id="@+id/next_ib"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toBottomOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toStartOf="@id/heart_ib"
-            app:layout_constraintStart_toEndOf="@id/extended_play_ib"
-            app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
-
-        <Constraint
-            android:id="@+id/heart_ib"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="16dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toBottomOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/next_ib"
-            app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
-
+        <Constraint android:id="@+id/heart_ib">
+            <PropertySet android:alpha="0" />
+        </Constraint>
     </ConstraintSet>
 
     <ConstraintSet
         android:id="@+id/end"
         app:deriveConstraintsFrom="@id/start">
 
-        <Constraint
-            android:id="@+id/drag_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+        <Constraint android:id="@+id/drag_view">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/more_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toStartOf="@id/title_tv"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
+        <Constraint android:id="@+id/more_iv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/title_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:alpha="0"
-            app:layout_constraintBottom_toTopOf="@id/author_tv"
-            app:layout_constraintEnd_toStartOf="@id/play_ib"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@id/more_iv"
-            app:layout_constraintTop_toTopOf="@id/drag_view"
-            app:layout_constraintVertical_chainStyle="packed" />
+        <Constraint android:id="@+id/title_tv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/author_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="@id/title_tv"
-            app:layout_constraintStart_toStartOf="@id/title_tv"
-            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+        <Constraint android:id="@+id/author_tv">
+            <PropertySet android:alpha="0" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/play_ib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/title_tv"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
+        <Constraint android:id="@+id/play_ib">
+            <PropertySet android:alpha="0" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/collapse_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toStartOf="@id/now_playing_tv"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
+        <Constraint android:id="@+id/collapse_iv">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/now_playing_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/playlist_tv"
-            app:layout_constraintEnd_toStartOf="@id/playlist_ib"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@id/collapse_iv"
-            app:layout_constraintTop_toTopOf="@id/drag_view"
-            app:layout_constraintVertical_chainStyle="packed" />
+        <Constraint android:id="@+id/now_playing_tv">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/playlist_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="@id/now_playing_tv"
-            app:layout_constraintStart_toStartOf="@id/now_playing_tv"
-            app:layout_constraintTop_toBottomOf="@id/now_playing_tv" />
+        <Constraint android:id="@+id/playlist_tv">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
+        <Constraint android:id="@+id/playlist_ib">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/playlist_ib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/now_playing_tv"
-            app:layout_constraintTop_toTopOf="@id/drag_view" />
+        <Constraint android:id="@+id/cover_iv">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/cover_iv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            app:layout_constraintBottom_toTopOf="@id/extended_title_tv"
-            app:layout_constraintDimensionRatio="H,1:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/guideline"
-            app:layout_constraintVertical_bias="0.35"
-            app:layout_constraintVertical_chainStyle="packed" />
+        <Constraint android:id="@+id/extended_title_tv">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/extended_title_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toTopOf="@id/extended_author_tv"
-            app:layout_constraintEnd_toEndOf="@id/cover_iv"
-            app:layout_constraintStart_toStartOf="@id/cover_iv"
-            app:layout_constraintTop_toBottomOf="@id/cover_iv"
-            app:layout_constraintVertical_chainStyle="packed" />
+        <Constraint android:id="@+id/extended_author_tv">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/extended_author_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            app:layout_constraintBottom_toTopOf="@id/prev_ib"
-            app:layout_constraintEnd_toEndOf="@id/extended_title_tv"
-            app:layout_constraintStart_toStartOf="@id/extended_title_tv"
-            app:layout_constraintTop_toBottomOf="@id/extended_title_tv" />
+        <Constraint android:id="@+id/progress_bar">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/progress_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toTopOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/extended_author_tv" />
+        <Constraint android:id="@+id/block_ib">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/block_ib"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toStartOf="@id/prev_ib"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
+        <Constraint android:id="@+id/prev_ib">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/prev_ib"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toStartOf="@id/extended_play_ib"
-            app:layout_constraintStart_toEndOf="@id/block_ib"
-            app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
+        <Constraint android:id="@+id/extended_play_ib">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/extended_play_ib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            app:layout_constraintEnd_toStartOf="@id/next_ib"
-            app:layout_constraintStart_toEndOf="@id/prev_ib"
-            app:layout_constraintTop_toBottomOf="@id/progress_bar" />
+        <Constraint android:id="@+id/next_ib">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/next_ib"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            app:layout_constraintBottom_toBottomOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toStartOf="@id/heart_ib"
-            app:layout_constraintStart_toEndOf="@id/extended_play_ib"
-            app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
+        <Constraint android:id="@+id/heart_ib">
+            <PropertySet android:alpha="1" />
+        </Constraint>
 
-        <Constraint
-            android:id="@+id/heart_ib"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="@id/extended_play_ib"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/next_ib"
-            app:layout_constraintTop_toTopOf="@id/extended_play_ib" />
-
-        <Constraint
-            android:id="@+id/tab_bar"
-            android:layout_width="match_parent"
-            android:layout_height="?android:attr/actionBarSize"
-            app:layout_constraintTop_toBottomOf="parent"
-            app:menu="@menu/navigation_menu" />
-
-
+        <Constraint android:id="@+id/tab_bar">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:menu="@menu/navigation_menu" />
+        </Constraint>
     </ConstraintSet>
 
 </MotionScene>
