@@ -6,4 +6,10 @@
 
     <color name="textControlPrimary">#ffffff</color>
     <color name="textControlSecondary">#DBDBDB</color>
+
+    <color name="blue">#83A1C9</color>
+    <color name="orange">#F67E05</color>
+    <color name="green">#BDD199</color>
+    <color name="gray">#F8F9FA</color>
+
 </resources>
