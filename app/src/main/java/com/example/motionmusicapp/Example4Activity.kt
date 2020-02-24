@@ -78,47 +78,49 @@ class Example4Activity : AppCompatActivity() {
         motion_scene?.transitionToEnd()
     }
 
-    private fun resetZoomedView(cs: ConstraintSet, viewId: Int?) {
+    private fun resetZoomedView(constraintSet: ConstraintSet, viewId: Int?) {
         viewId?.let {
 
             val screenWidth = resources.displayMetrics.widthPixels
             val gridItemSize = screenWidth / 3
 
-            cs.constrainWidth(viewId, gridItemSize)
-            cs.constrainHeight(viewId, gridItemSize)
+            with(constraintSet) {
+                constrainWidth(viewId, gridItemSize)
+                constrainHeight(viewId, gridItemSize)
 
-            when (viewId) {
-                in topRowIds -> {
-                    cs.connect(viewId, TOP, R.id.matrix_root, TOP, 0)
-                    cs.connect(viewId, BOTTOM, R.id.horizontal_middle, TOP, 0)
+                when (viewId) {
+                    in topRowIds -> {
+                        connect(viewId, TOP, R.id.matrix_root, TOP, 0)
+                        connect(viewId, BOTTOM, R.id.horizontal_middle, TOP, 0)
+                    }
+                    in middleRowIds -> {
+                        connect(viewId, TOP, R.id.horizontal_middle, TOP, 0)
+                        connect(viewId, BOTTOM, R.id.horizontal_middle, BOTTOM, 0)
+                    }
+                    in lastRowIds -> {
+                        connect(viewId, TOP, R.id.horizontal_middle, BOTTOM, 0)
+                        connect(viewId, BOTTOM, R.id.matrix_root, BOTTOM, 0)
+                    }
+                    else -> return
                 }
-                in middleRowIds -> {
-                    cs.connect(viewId, TOP, R.id.horizontal_middle, TOP, 0)
-                    cs.connect(viewId, BOTTOM, R.id.horizontal_middle, BOTTOM, 0)
-                }
-                in lastRowIds -> {
-                    cs.connect(viewId, TOP, R.id.horizontal_middle, BOTTOM, 0)
-                    cs.connect(viewId, BOTTOM, R.id.matrix_root, BOTTOM, 0)
-                }
-                else -> return
-            }
 
-            when (viewId) {
-                in leftColumnIds -> {
-                    cs.connect(viewId, START, R.id.matrix_root, START, 0)
-                    cs.connect(viewId, END, R.id.vertical_middle, START, 0)
+                when (viewId) {
+                    in leftColumnIds -> {
+                        connect(viewId, START, R.id.matrix_root, START, 0)
+                        connect(viewId, END, R.id.vertical_middle, START, 0)
+                    }
+                    in middleColumnIds -> {
+                        connect(viewId, START, R.id.vertical_middle, START, 0)
+                        connect(viewId, END, R.id.vertical_middle, END, 0)
+                    }
+                    in rightColumnIds -> {
+                        connect(viewId, START, R.id.vertical_middle, END, 0)
+                        connect(viewId, END, R.id.matrix_root, END, 0)
+                    }
+                    else -> return
                 }
-                in middleColumnIds -> {
-                    cs.connect(viewId, START, R.id.vertical_middle, START, 0)
-                    cs.connect(viewId, END, R.id.vertical_middle, END, 0)
-                }
-                in rightColumnIds -> {
-                    cs.connect(viewId, START, R.id.vertical_middle, END, 0)
-                    cs.connect(viewId, END, R.id.matrix_root, END, 0)
-                }
-                else -> return
+                setElevation(viewId, 0f)
             }
-            cs.setElevation(viewId, 0f)
         }
     }
 }
