@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:background="?android:attr/colorPrimaryDark"
-    tools:context=".MainActivity"
+    tools:context=".MusicAppActivity"
     tools:parentTag="androidx.constraintlayout.motion.widget.MotionLayout">
 
     <ImageView

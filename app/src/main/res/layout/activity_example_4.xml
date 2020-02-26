@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/example_4_motion_scene"
-    tools:context=".MainActivity">
+    tools:context=".MusicAppActivity">
 
     <Space
         android:id="@+id/matrix_root"
