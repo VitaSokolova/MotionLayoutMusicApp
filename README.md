@@ -9,6 +9,6 @@
 * Example2Activity - пример с перемещением изменением цвета и ключевым кадром
 * Example3Activity - пример с программным заданием констреинтов
 
-* MusicAppActivity - реализация ыдвигающейся шторки с музыкальной композицией
+* MusicAppActivity - реализация выдвигающейся шторки с музыкальной композицией
 
-<img src="https://s5.gifyu.com/images/SVID_20200220_095146_1-1.md.gif" alt="drawing" width="300"/>
+<img src="https://s5.gifyu.com/images/SVID_20200220_095146_1-1.md.gif" width="300"/>
