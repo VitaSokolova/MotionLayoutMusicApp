@@ -11,4 +11,4 @@
 
 * MusicAppActivity - реализация выдвигающейся шторки с музыкальной композицией
 
-<img src="https://s5.gifyu.com/images/SVID_20200220_095146_1-1.md.gif" width="300"/>
+<img src="https://i.ibb.co/9p9KN9M/Motion-Layout.gif" width="300"/>
