@@ -224,5 +224,4 @@
                 app:menu="@menu/navigation_menu" />
         </Constraint>
     </ConstraintSet>
-
 </MotionScene>

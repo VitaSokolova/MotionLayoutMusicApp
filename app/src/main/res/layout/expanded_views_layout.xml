@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:maxLines="1"
-        android:text="Сейчас играет"
+        android:text="@string/current_playlist"
         android:textAppearance="@style/RobotoRegular.12.Secondary"
         app:layout_constraintBottom_toTopOf="@id/playlist_tv"
         app:layout_constraintEnd_toStartOf="@id/playlist_ib"
@@ -44,7 +44,7 @@
         android:layout_marginTop="4dp"
         android:gravity="center_horizontal"
         android:maxLines="1"
-        android:text="лучшее"
+        android:text="@string/sample_playlist"
         android:textAllCaps="true"
         android:textAppearance="@style/RobotoMedium.14.Primary"
         app:layout_constraintBottom_toBottomOf="@id/guideline"
@@ -88,7 +88,7 @@
         android:layout_marginTop="8dp"
         android:gravity="start"
         android:maxLines="1"
-        android:text="Маленький человек"
+        android:text="@string/sample_song"
         android:textAppearance="@style/RobotoMedium.20.Primary"
         app:layout_constraintBottom_toTopOf="@id/extended_author_tv"
         app:layout_constraintEnd_toEndOf="@id/cover_iv"
@@ -103,7 +103,7 @@
         android:layout_marginTop="4dp"
         android:gravity="start"
         android:maxLines="1"
-        android:text="Zемфира"
+        android:text="@string/sample_artist"
         android:textAppearance="@style/RobotoRegular.16.Secondary"
         app:layout_constraintBottom_toTopOf="@id/prev_ib"
         app:layout_constraintEnd_toEndOf="@id/extended_title_tv"
@@ -158,10 +158,10 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/circle_bkg"
         android:src="@drawable/ic_play_arrow"
-        android:tint="?android:attr/colorPrimaryDark"
         app:layout_constraintEnd_toStartOf="@id/next_ib"
         app:layout_constraintStart_toEndOf="@id/prev_ib"
-        app:layout_constraintTop_toBottomOf="@id/progress_bar" />
+        app:layout_constraintTop_toBottomOf="@id/progress_bar"
+        app:tint="?android:attr/colorPrimaryDark" />
 
     <ImageButton
         android:id="@+id/next_ib"

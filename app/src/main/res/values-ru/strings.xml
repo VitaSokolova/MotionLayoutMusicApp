@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MotionMusicApp</string>
+    <string name="main_tab">Главная</string>
+    <string name="radio_tab">Радио</string>
+    <string name="music_tab">Моя музыка</string>
+    <string name="search_tab">Поиск</string>
+    <string name="sample_artist">Zемфира</string>
+    <string name="current_playlist">Сейчас играет</string>
+    <string name="sample_playlist">Лучшее</string>
+</resources>

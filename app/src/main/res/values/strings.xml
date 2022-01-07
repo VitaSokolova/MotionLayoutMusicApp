@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MotionMusicApp</string>
-    <string name="main_tab">Главная</string>
-    <string name="radio_tab">Радио</string>
-    <string name="music_tab">Моя музыка</string>
-    <string name="search_tab">Поиск</string>
-    <string name="title_activity_example2">Example2Activity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="main_tab">Home</string>
+    <string name="radio_tab">Radio</string>
+    <string name="music_tab">My music</string>
+    <string name="search_tab">Search</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
+    <string name="sample_artist">Zemfira</string>
+    <string name="current_playlist">Playlist</string>
+    <string name="sample_playlist">The best</string>
+    <string name="sample_song" translatable="false">Лампочки</string>
+    <string name="title_activity_example1" translatable="false">Example1Activity</string>
+    <string name="title_activity_example2" translatable="false">Example2Activity</string>
+    <string name="title_activity_example4" translatable="false">ExampleActivity4</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_activity_example4">ExampleActivity4</string>
 </resources>

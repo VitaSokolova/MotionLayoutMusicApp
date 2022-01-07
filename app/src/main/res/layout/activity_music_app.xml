@@ -18,8 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/navigation_menu" />
 
-    <include layout="@layout/scene1" />
+    <include layout="@layout/colapsed_views_layout" />
 
-    <include layout="@layout/scene2" />
+    <include layout="@layout/expanded_views_layout" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

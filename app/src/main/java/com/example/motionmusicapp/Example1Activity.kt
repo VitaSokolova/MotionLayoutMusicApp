@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 /**
- * Пример с перемещением вью из левой части экрана в правую
+ * Sample with moving view from the left to the right
+ *
+ * Mark Activity with launcher intent-filter at AndroidManifest.xml to run this sample
  */
 class Example1Activity : AppCompatActivity() {
 

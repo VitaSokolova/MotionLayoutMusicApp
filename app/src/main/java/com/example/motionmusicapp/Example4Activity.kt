@@ -8,9 +8,11 @@ import androidx.constraintlayout.widget.ConstraintSet
 import kotlinx.android.synthetic.main.activity_example_4.*
 
 /**
- * Пример с программным заданием констреинтов
+ * Sample with programmatically set up constraints
  *
  * Copied from https://github.com/kaeawc/motion-photo-grid
+ *
+ * Mark Activity with launcher intent-filter at AndroidManifest.xml to run this sample
  */
 class Example4Activity : AppCompatActivity() {
 

@@ -11,38 +11,24 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Example4Activity"
+            android:exported="false"
             android:label="@string/title_activity_example4"
-            android:theme="@style/AppTheme.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-        <activity android:name=".Example2Activity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-        <activity android:name=".Example1Activity">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity android:name=".MusicAppActivity">
-
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Example2Activity"
+            android:label="@string/title_activity_example2"
+            android:exported="false" />
+        <activity
+            android:name=".Example1Activity"
+            android:label="@string/title_activity_example1"
+            android:exported="true" />
+        <activity
+            android:name=".MusicAppActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
