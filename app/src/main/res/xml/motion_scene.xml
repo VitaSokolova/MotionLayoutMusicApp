@@ -4,8 +4,7 @@
 
     <Transition
         app:constraintSetEnd="@+id/end"
-        app:constraintSetStart="@+id/start"
-        app:duration="1500">
+        app:constraintSetStart="@+id/start">
 
         <OnSwipe
             app:dragDirection="dragUp"

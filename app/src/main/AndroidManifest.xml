@@ -21,7 +21,7 @@
         <activity
             android:name=".Example1Activity"
             android:label="@string/title_activity_example1"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".MusicAppActivity"
             android:exported="true">
