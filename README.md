@@ -1,4 +1,12 @@
 # MotionLayoutMusicApp
+
+<img src="https://i.ibb.co/9p9KN9M/Motion-Layout.gif" width=300/>
+
+## ⚠️⚠️⚠️ For EPAM Android course attendees:
+*   **master** branch contains ready homework
+*   **homework ** contains required minimum to do the homework
+
+_____
 Набор примеров из доклада "MotionLayout: эффектные анимации за минимальное время", SurfStudio, февраль 2020
 
 
@@ -11,4 +19,4 @@
 
 * MusicAppActivity - реализация выдвигающейся шторки с музыкальной композицией
 
-<img src="https://i.ibb.co/9p9KN9M/Motion-Layout.gif" width=300/>
+
