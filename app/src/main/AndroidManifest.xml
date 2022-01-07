@@ -10,19 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Example4Activity"
-            android:exported="false"
-            android:label="@string/title_activity_example4"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Example2Activity"
-            android:label="@string/title_activity_example2"
-            android:exported="false" />
-        <activity
-            android:name=".Example1Activity"
-            android:label="@string/title_activity_example1"
-            android:exported="true" />
-        <activity
             android:name=".MusicAppActivity"
             android:exported="true">
             <intent-filter>

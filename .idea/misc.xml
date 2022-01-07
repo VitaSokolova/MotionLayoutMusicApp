@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1234375" />
+        <entry key="app/src/main/res/drawable/drag_view_background.xml" value="0.272" />
         <entry key="app/src/main/res/layout/a_scene.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_example_1.xml" value="0.4583333333333333" />
         <entry key="app/src/main/res/layout/activity_example_2.xml" value="0.78875" />
         <entry key="app/src/main/res/layout/activity_music_app.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/b_scene.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/colapsed_views_layout.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/expanded_views_layout.xml" value="0.7602409638554217" />
         <entry key="app/src/main/res/layout/scene1.xml" value="0.20742753623188406" />
         <entry key="app/src/main/res/layout/start_scene.xml" value="0.9025" />
